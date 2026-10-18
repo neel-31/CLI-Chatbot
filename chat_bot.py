@@ -10,6 +10,7 @@ msgs=[
 
 while True:
     u_prompt=input("Enter your prompt : ")
+    if u_prompt=="Bye":break
     u_role={"role":"user","content":u_prompt}
     msgs.append(u_role)
     response=ollama.chat(model=model,messages=msgs)
